@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="Cert" prefHeight="550.0" prefWidth="624.0" style="-fx-background-color: #F0E68C;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="covid19system.VaccinationCertController">
+   <children>
+      <Label layoutX="177.0" layoutY="7.0" text="Digital Certificate" textFill="#003f5d">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="49.0" text="for COVID-19 Vaccination" textFill="#003f5d">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="35.0" layoutY="149.0" prefHeight="366.0" prefWidth="565.0" style="-fx-border-color: #002f5c; -fx-border-width: 3 3 3 3; -fx-border-radius: 10 10 10 10; -fx-background-color: #FAFAD2;">
+         <children>
+            <Line endX="461.0" layoutX="102.0" layoutY="177.0" startX="-100.0" />
+            <Label fx:id="firstdose" layoutX="39.0" layoutY="14.0" text="First Dose" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="seconddose" layoutX="38.0" layoutY="183.0" text="Second Dose" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD1date" layoutX="234.0" layoutY="44.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD1time" layoutX="234.0" layoutY="68.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD1venue" layoutX="234.0" layoutY="92.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="44.0" text="Date" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="68.0" text="Time" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="92.0" text="Venue" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="116.0" text="Vaccine Type" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="140.0" text="Batch ID" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD1VT" layoutX="234.0" layoutY="115.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD1BID" layoutX="234.0" layoutY="140.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD2date" layoutX="232.0" layoutY="218.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD2time" layoutX="232.0" layoutY="242.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD2venue" layoutX="232.0" layoutY="266.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="218.0" text="Date" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="242.0" text="Time" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="266.0" text="Venue" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="290.0" text="Vaccine Type" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="314.0" text="Batch ID" textFill="#003f5d">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD2VT" layoutX="232.0" layoutY="289.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblD2BID" layoutX="232.0" layoutY="314.0" text="N/A" textFill="#006db2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="196.0" layoutY="77.0" text="LEE KHAI WEN" textFill="#006db2">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblID" layoutX="195.0" layoutY="107.0" text="IC / PASSPORT" textFill="#006db2">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
