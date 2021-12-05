@@ -13,8 +13,8 @@ public class RegistrationSystemMain extends Application {
     public void start(Stage primaryStage) {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("Personnel.fxml"));
-            Scene scene = new Scene(root,1030,750);
+            Parent root = FXMLLoader.load(getClass().getResource("PeopleView&SearchVaccineDetails.fxml"));
+            Scene scene = new Scene(root,1030,780);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Book Vaccination Appointment");
             primaryStage.setResizable(true);

@@ -2,21 +2,30 @@
 package oodj_vaccineregistrationsystem;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.net.URL;
-import java.util.*;
-import javafx.collections.*;
+import java.util.Optional;
+import java.util.ResourceBundle;
+import java.util.Scanner;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.*;
-import javafx.scene.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-
-public class ViewandSearchVaccineDetailsController implements Initializable {
-    
-    @FXML
+public class PeopleViewnSearchVaccineDetailsController implements Initializable {
+   @FXML
     private Pane AZTab;
     @FXML
     private Pane BJTab;
@@ -33,7 +42,7 @@ public class ViewandSearchVaccineDetailsController implements Initializable {
     @FXML
     private Pane UMTab;
     @FXML
-    private AnchorPane ViewandSearchVaccineDetails;
+    private AnchorPane PeopleViewandSearchVaccine;
     @FXML
     private ComboBox<String> cboAZBID;
     @FXML
@@ -826,15 +835,15 @@ public class ViewandSearchVaccineDetailsController implements Initializable {
         lblUMExpDate.setText("YYYY/MM/DD");
     }
   
-    public void showPersonnel(){
+    public void showPeople(){
         try {
             Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Personnel.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("People.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Personnel Interface");
+            primaryStage.setTitle("People Interface");
             primaryStage.show();
-            ViewandSearchVaccineDetails.getScene().getWindow().hide();
+            PeopleViewandSearchVaccine.getScene().getWindow().hide();
 	}
 	catch (Exception e) {
 	    System.out.println("Can't load new window.");
@@ -859,7 +868,7 @@ public class ViewandSearchVaccineDetailsController implements Initializable {
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Login");
 		primaryStage.show();
-                ViewandSearchVaccineDetails.getScene().getWindow().hide();
+                PeopleViewandSearchVaccine.getScene().getWindow().hide();
             }
             catch (Exception e) {
 		System.out.println("Can't load new window.");
@@ -868,5 +877,4 @@ public class ViewandSearchVaccineDetailsController implements Initializable {
             alert.hide();
 	}
     }    
-    
 }
