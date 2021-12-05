@@ -1,0 +1,4 @@
+001;Pfizer;University Malaya (UM);4999;2023-05-08;
+002;Sinovac;Axiata Arena Bukit Jalil;4994;2023-06-02;
+003;Astrazeneca;Kuala Lumpur Convention Centre (KLCC);4998;2023-07-20;
+004;Pfizer;University Malaya (UM);500;2023-06-08;
