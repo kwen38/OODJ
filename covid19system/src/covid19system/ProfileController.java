@@ -59,7 +59,7 @@ public class ProfileController implements Initializable {
     private Label lblphoneno;
        
     @FXML
-    private Button btnGenerate;
+    private Button btnGenerate; 
     
     Alert alert = new Alert(Alert.AlertType.WARNING);
     
@@ -125,19 +125,33 @@ public class ProfileController implements Initializable {
         Profile.getScene().getWindow().hide();
      }
      
+     private Stage stage;
+     private Scene scene; 
+     private Parent root;
      public void generatecert(ActionEvent event)throws Exception{
         Stage primaryStage = new Stage ();  
         FXMLLoader loader = new FXMLLoader(getClass().getResource("VaccinationCert.fxml"));   
         Parent root = (Parent) loader.load();
-        ProfileController procontroller= loader.getController();
-        procontroller.myftn(lblID.getText());      
+        VaccinationCertController procontroller= loader.getController();
+        procontroller.getdata(lblID.getText());      
         Scene scene = new Scene (root);
         primaryStage.setScene (scene);
         primaryStage.setTitle ("Vaccination Certificate");
         primaryStage.show();
         Profile.getScene().getWindow().hide();
         
-//         Stage primaryStage = new Stage ();
+//
+//          String ID = lblID.getText();
+//          FXMLloader = new FXMLLoader(getClass().getResource("VaccinationCert.fxml"));
+//          root = loader.load(); 
+//          VaccinationCertController vaccinationcertcontroller = loader.getController();
+//          vaccinationcertcontroller.displayName(ID);
+//          
+//          stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//          scene = new Scene(root);
+//          stage.setScene(scene);
+//          stage.show();
+//        Stage primaryStage = new Stage ();
 //        Parent root = FXMLLoader.load(getClass().getResource("VaccinationCert.fxml"));
 //        Scene scene = new Scene (root);
 //        primaryStage.setScene (scene);
@@ -148,13 +162,24 @@ public class ProfileController implements Initializable {
     
      @FXML
     public void editpage(ActionEvent event) throws Exception{
- Stage primaryStage = new Stage ();
-        Parent root = FXMLLoader.load(getClass().getResource("Profile_Edit.fxml"));
+        Stage primaryStage = new Stage ();  
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("profileEditPeople.fxml"));   
+        Parent root = (Parent) loader.load();
+        ProfileEditPeopleController procontroller= loader.getController();
+        procontroller.getdata(lblID.getText());      
         Scene scene = new Scene (root);
         primaryStage.setScene (scene);
-        primaryStage.setTitle ("Edit Profile");
+        primaryStage.setTitle ("Edit profile");
         primaryStage.show();
         Profile.getScene().getWindow().hide();
+        
+// Stage primaryStage = new Stage ();
+//        Parent root = FXMLLoader.load(getClass().getResource("ProfileEditPeople.fxml"));
+//        Scene scene = new Scene (root);
+//        primaryStage.setScene (scene);
+//        primaryStage.setTitle ("Edit Profile");
+//        primaryStage.show();
+//        Profile.getScene().getWindow().hide();
     }
 //      public void editpage (ActionEvent event)throws Exception{
 //         Stage primaryStage = new Stage ();

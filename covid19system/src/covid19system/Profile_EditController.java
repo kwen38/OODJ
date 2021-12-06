@@ -160,6 +160,7 @@ public class Profile_EditController implements Initializable {
         		alert.setTitle("Successfully Updated");
         		alert.setContentText("Updated Successfully!");
         		alert.show();
+                        
                     }else{
                         tempArray.add(line);
                     }

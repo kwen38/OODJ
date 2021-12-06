@@ -6,8 +6,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="Cert" prefHeight="550.0" prefWidth="624.0" style="-fx-background-color: #F0E68C;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="covid19system.VaccinationCertController">
+<AnchorPane id="AnchorPane" fx:id="Cert" prefHeight="550.0" prefWidth="624.0" style="-fx-background-color: #F0E68C;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="covid19system.VaccinationCertController">
    <children>
       <Label layoutX="177.0" layoutY="7.0" text="Digital Certificate" textFill="#003f5d">
          <font>
@@ -134,7 +133,7 @@
             </Label>
          </children>
       </Pane>
-      <Label layoutX="196.0" layoutY="77.0" text="LEE KHAI WEN" textFill="#006db2">
+      <Label fx:id="lblName" layoutX="196.0" layoutY="77.0" text="NAME" textFill="#006db2">
          <font>
             <Font name="Franklin Gothic Demi Cond" size="30.0" />
          </font>

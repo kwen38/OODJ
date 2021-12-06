@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -61,11 +62,46 @@ public class ProfileEditPeopleController implements Initializable {
     private AnchorPane ProfileEditPeople;
      Alert alert = new Alert(Alert.AlertType.WARNING);
     
+     public void getdata (String text){
+         lblID.setText(text);
+         getdata1();
+     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        
 
     }    
+    
+    public void getdata1 (){
+         String [] wordsinLine = null;
+         boolean stat = false;
+         String ID = lblID.getText();
+         try{
+             File SD = new File("people.txt");
+             Scanner Sc = new Scanner(SD);
+             while(Sc.hasNextLine()){
+                 String Line = Sc.nextLine();
+                 if (!(Line.isEmpty())){
+                     wordsinLine = Line.split(";");
+                     if (ID.compareTo(wordsinLine[4])== 0 ){
+                         
+                         stat = true;
+                     }
+                     if (stat == true){
+                         lblName.setText(wordsinLine[0]);
+                         txtPhoneno.setText(wordsinLine[1]);
+                         txtENo.setText(wordsinLine[2]);
+                         txtCountry.setText(wordsinLine[6]);
+                         txtAddress.setText(wordsinLine[3]);
+                         txtPassword.setText(wordsinLine[5]);
+                     }
+                 }
+             }
+         }catch(Exception e){
+             
+         }
+    }
+    
     public void back ()throws Exception{
         Stage primaryStage = new Stage ();
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));

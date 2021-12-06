@@ -61,17 +61,7 @@ public class LoginController implements Initializable {
 //        this.txtID = ID;
 //    }
             
-    public class ID {
-        private String id;
-        
-        public String getID(){
-            return id;
-        }
-        public void setID (String ID){
-            this.id = id;
-        }
-        
-    }
+    
     @Override
     public void initialize (URL url, ResourceBundle rb) {
         
@@ -126,6 +116,7 @@ public class LoginController implements Initializable {
         primaryStage.setTitle ("Profile");
         primaryStage.show();
         Login.getScene().getWindow().hide();
+        
         return;
       
          }

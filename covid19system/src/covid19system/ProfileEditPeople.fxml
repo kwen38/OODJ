@@ -12,8 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="ProfileEditPeople" prefHeight="717.0" prefWidth="1030.0" style="-fx-background-color: dfe9f5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="covid19system.ProfileEditPeopleController">
+<AnchorPane id="AnchorPane" fx:id="ProfileEditPeople" prefHeight="717.0" prefWidth="1030.0" style="-fx-background-color: dfe9f5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="covid19system.ProfileEditPeopleController">
    <children>
       <Circle fill="#003f5d" layoutX="607.0" layoutY="76.0" radius="4.0" stroke="#003f5d" strokeType="INSIDE" />
       <Line endX="255.0" layoutX="731.0" layoutY="76.0" startX="-100.0" stroke="#003f5d" strokeWidth="2.0" />
@@ -89,7 +88,7 @@
       <TextField fx:id="txtENo" layoutX="382.0" layoutY="327.0" prefHeight="31.0" prefWidth="251.0" style="-fx-border-color: #003f5d; -fx-border-radius: 5 5 5 5; -fx-border-width: 3 3 3 3;" />
       <TextField fx:id="txtCountry" layoutX="382.0" layoutY="387.0" prefHeight="31.0" prefWidth="251.0" style="-fx-border-color: #003f5d; -fx-border-radius: 5 5 5 5; -fx-border-width: 3 3 3 3;" />
       <TextField fx:id="txtAddress" layoutX="381.0" layoutY="443.0" prefHeight="31.0" prefWidth="251.0" style="-fx-border-color: #003f5d; -fx-border-radius: 5 5 5 5; -fx-border-width: 3 3 3 3;" />
-      <Button fx:id="btnSave" layoutX="894.0" layoutY="611.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="103.0" style="-fx-background-color: dfe9f5; -fx-border-color: #002f5c #002f5c; -fx-border-width: 2 2 2 2; -fx-border-radius: 5 5 5 5;" text="Save">
+      <Button fx:id="btnSave" layoutX="894.0" layoutY="611.0" mnemonicParsing="false" onAction="#save" prefHeight="52.0" prefWidth="103.0" style="-fx-background-color: dfe9f5; -fx-border-color: #002f5c #002f5c; -fx-border-width: 2 2 2 2; -fx-border-radius: 5 5 5 5;" text="Save">
          <font>
             <Font name="Franklin Gothic Demi Cond" size="17.0" />
          </font>
@@ -97,7 +96,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnBack" layoutX="74.0" layoutY="604.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="103.0" style="-fx-background-color: dfe9f5; -fx-border-color: #002f5c #002f5c; -fx-border-width: 2 2 2 2; -fx-border-radius: 5 5 5 5;" text="Back">
+      <Button fx:id="btnBack" layoutX="74.0" layoutY="604.0" mnemonicParsing="false" onAction="#back" prefHeight="52.0" prefWidth="103.0" style="-fx-background-color: dfe9f5; -fx-border-color: #002f5c #002f5c; -fx-border-width: 2 2 2 2; -fx-border-radius: 5 5 5 5;" text="Back">
          <font>
             <Font name="Franklin Gothic Demi Cond" size="17.0" />
          </font>
