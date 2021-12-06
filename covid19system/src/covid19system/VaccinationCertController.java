@@ -53,19 +53,29 @@ public class VaccinationCertController implements Initializable {
     
     @FXML
     private AnchorPane Cert;
+        @FXML
+    private Label lblName;
     
-    public void myftn(String text) {
+    public void getdata (String text){
         lblID.setText(text);
         getD1data();
         getD2data();
-        
+        getname();
+
     }
+//    public void getID(String ID) {
+//        lblID.setText(ID);
+//        
+//        
+//    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 //        lblID.setText ("011121-08-1112");
         
-        getD1data();
-        getD2data();
+//        getD1data();
+//        getD2data();
+//        getname();
 
     }    
     // get Dose 1 data
@@ -121,6 +131,33 @@ public class VaccinationCertController implements Initializable {
                         lblD2venue.setText(wordsinLine[5]);
                         lblD2VT.setText(wordsinLine[6]);
                         lblD2BID.setText(wordsinLine[7]);
+                    }
+                }
+            }
+        }catch (Exception e){
+            
+        }
+    }
+    
+    public void getname(){
+        String [] wordsinLine = null;
+        boolean stat = false;
+        String ID = lblID.getText();
+        
+        try{
+            File p = new File("people.txt");
+            Scanner Sc = new Scanner(p);
+            while(Sc.hasNextLine()){
+                String Line = Sc.nextLine();
+                if (!(Line.isEmpty())){
+                    wordsinLine = Line.split(";");
+                    if ((ID.compareTo(wordsinLine[4])== 0))
+                    {
+                        stat = true;
+                    }
+                    if (stat == true){
+                        lblName.setText(wordsinLine[0]);
+                        
                     }
                 }
             }
